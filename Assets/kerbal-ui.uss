@@ -1,12 +1,18 @@
 /*region ============ Root element ============ */
 
-/*noinspection CssInvalidPseudoSelector,CssUnknownTarget,CssUnknownProperty*/
+/*noinspection CssInvalidPseudoSelector*/
 :root {
-    /*-unity-font-definition: url('/Assets/realtimerounded-bold SDF.asset');*/
-    -unity-font-definition: url('/Assets/fonts/JetBrainsMono-Bold SDF.asset');
+    /*noinspection CssUnknownTarget*/
+    --font-regular: url('/Assets/Theme/Fonts/JetBrainsMono-Regular SDF.asset');
+    /*noinspection CssUnknownTarget*/
+    --font-medium: url('/Assets/Theme/Fonts/JetBrainsMono-Medium SDF.asset');
+    /*noinspection CssUnknownTarget*/
+    --font-bold: url('/Assets/Theme/Fonts/JetBrainsMono-Bold SDF.asset');
+    /*noinspection CssUnknownProperty,CssInvalidFunction,CssUnresolvedCustomProperty*/
+    -unity-font-definition: var(--font-bold);
     color: #c0c7d5;
 }
-/*noinspection CssInvalidPseudoSelector*/
+
 .root {
     padding: 8px;
     border-radius: 5px;
@@ -20,11 +26,22 @@
 
 /*region ============ ScrollView ============ */
 
-/*noinspection CssUnknownTarget*/
 .unity-scroll-view {
     width: 100%;
     height: 100%;
     background-color: #1e2129;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+/* endregion */
+
+/*region ============ ListView ============ */
+
+.unity-list-view > .unity-scroll-view {
+    width: 100%;
+    height: 100%;
+    background-color: initial;
     border-radius: 6px;
     padding: 8px;
 }
@@ -351,6 +368,49 @@
 
 .unity-foldout > .unity-foldout__toggle:active > .unity-base-field__input > .unity-toggle__checkmark {
     -unity-background-image-tint-color: #d5dfff;
+}
+
+/* endregion */
+
+
+/* region ============ Title bar ============ */
+
+#title-bar {
+    flex-direction: row;
+    margin-bottom: 16px;
+    margin-top: 6px;
+    align-items: center;
+}
+
+#title-bar > Button {
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 2px;
+    border-color: rgb(175, 178, 190);
+    color: rgb(175, 178, 190);
+    border-radius: 8px;
+}
+
+#title-bar > Button:hover {
+    border-color: #e8ecfe;
+    color: #e8ecfe;
+}
+
+#title-bar > Button:active {
+    border-color: #b4bce4;
+    color: #b4bce4;
+}
+
+#title-bar > Label {
+    -unity-text-align: upper-left;
+    font-size: 25px;
+    -unity-font-style: normal;
+    /*noinspection CssUnknownProperty,CssInvalidFunction,CssUnresolvedCustomProperty*/
+    -unity-font-definition: var(--font-regular);
+    color: rgb(175, 178, 190);
 }
 
 /* endregion */
