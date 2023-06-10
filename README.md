@@ -1,3 +1,3 @@
 ﻿# Kerbal UI
 
-Unity UI Toolkit theme based on Kerbal Space Program 2 (for use with the KSP 2 UITK project)
+Unity project for the UI Toolkit theme and controls package based on Kerbal Space Program 2 (for use with the UITK for KSP 2 project).
